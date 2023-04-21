@@ -1,0 +1,13 @@
+migrations/
+/__pycache__/
+__pycache__/
+
+venv/
+db.sqlite3
+.env
+
+.idea/
+.git/
+
+media/
+static/
