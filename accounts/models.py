@@ -6,6 +6,7 @@ from django.utils.translation import gettext_lazy as _
 from django.contrib.postgres.fields import ArrayField
 
 from accounts.managers import CustomUserManager
+from django.contrib.auth.models import AbstractUser
 
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):

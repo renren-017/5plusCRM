@@ -17,7 +17,9 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
-
+WAGTAIL_USER_EDIT_FORM = 'accounts.forms.CustomUserEditForm'
+WAGTAIL_USER_CREATION_FORM = 'accounts.forms.CustomUserCreationForm'
+WAGTAIL_USER_CUSTOM_FIELDS = ['is_student', 'is_teacher']
 # Application definition
 
 INSTALLED_APPS = [
