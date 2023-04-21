@@ -16,15 +16,16 @@ import os
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
-AUTH_USER_MODEL = 'accounts.CustomUser'
-WAGTAIL_USER_EDIT_FORM = 'accounts.forms.CustomUserEditForm'
-WAGTAIL_USER_CREATION_FORM = 'accounts.forms.CustomUserCreationForm'
-WAGTAIL_USER_CUSTOM_FIELDS = ['is_student', 'is_teacher']
+AUTH_USER_MODEL = "accounts.CustomUser"
+WAGTAIL_USER_EDIT_FORM = "accounts.forms.CustomUserEditForm"
+WAGTAIL_USER_CREATION_FORM = "accounts.forms.CustomUserCreationForm"
+WAGTAIL_USER_CUSTOM_FIELDS = ["is_student", "is_teacher"]
 # Application definition
 
 INSTALLED_APPS = [
     "accounts",
-
+    "fiveplus",
+    "courses",
     "home",
     "search",
     "wagtail.contrib.forms",
@@ -36,7 +37,7 @@ INSTALLED_APPS = [
     "wagtail.documents",
     "wagtail.images",
     "wagtail.search",
-    'wagtail.locales',
+    "wagtail.locales",
     "wagtail.admin",
     "wagtail",
     "modelcluster",
@@ -50,7 +51,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.locale.LocaleMiddleware',
+    "django.middleware.locale.LocaleMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -175,9 +176,5 @@ WAGTAILADMIN_BASE_URL = "http://example.com"
 
 WAGTAIL_I18N_ENABLED = True
 
-LANGUAGE_CODE = 'ru'
-WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
-    ('en', "English"),
-    ('ru', "Russian")
-]
-
+LANGUAGE_CODE = "ru"
+WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [("en", "English"), ("ru", "Russian")]
